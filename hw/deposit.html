@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+alert("Расчет депозита");
+
+var deposit = +prompt("Введите сумму депозита");
+var percent = +prompt("Введите % депозита");
+var duration = +prompt("Введите длительность депозита (лет)");
+var exit1 = "Выход";
+
+for (i = 1; i <= duration ; i ++) {
+    deposit = deposit + deposit*(percent/100);
+    document.write(i+ "-й год: сумма вклада составит: " + deposit.toFixed(2) +"<br \/>");
+} 
+</script>

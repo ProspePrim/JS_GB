@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	alert("Каждый ходит по очереди. Результат станет известен после введения чисел. Для выхода введити : Выход или выход.");
+
+	var answer = parseInt(Math.random() * 100);
+	var userAnswer1 = +prompt("Игрок 1, введите число от 0 до 100");
+	var userAnswer2 = +prompt("Игрок 2, введите число от 0 до 100");
+	var exit1 = "Выход";
+	var exit2 = "выход";
+
+
+
+	for (var tryCount = 1; ; tryCount ++){
+		if(userAnswer1 == answer){
+			document.write("Поздравляю, победил Игрок 1 !!\n Вы угадали с " + tryCount + "-го раза");
+			break;
+
+		} else if (userAnswer1 > answer) {
+			alert("Игрок 1 ввел слишком большое число");
+		} else if (userAnswer1 < answer) {
+			alert("Игрок 1 ввел слишком маленькое число");
+		} else if (userAnswer1 = exit1 || exit2 ){
+			alert("Игрок вышел")
+			break;
+		}
+
+		if(userAnswer2 == answer){
+			document.write("Поздравляю, победил Игрок 2!!\n Вы угадали с " + tryCount + "-го раза");
+			break;
+
+		} else if (userAnswer2 > answer) {
+			alert("Игрок 2 ввел слишком большое число");
+		} else if (userAnswer2 < answer) {
+			alert("Игрок 2 ввел слишком маленькое число");
+		} else if (userAnswer2 = exit1 || exit2){
+			break;
+		}
+		userAnswer1 = +prompt(" Игрок 1, попробуйте еще раз.");
+		UserAnswer2 = +prompt(" Игрок 2, Попробуйте еще раз.");
+	}
+
+
+
+
+
+
+</script>
